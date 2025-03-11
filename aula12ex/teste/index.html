@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando a cor de fundo com um botão</title>
+</head>
+<body>
+    <h1>Aperte o botão para mudar a cor do plano de fundo.</h1>
+
+    <button onclick="mudar()">Clique</button>
+
+    <h1>Aperte o botão para criar uma imagem.</h1>
+
+    <button onclick="criar()">Clique</button>
+
+    <span id="resultado"></span>
+
+    <script>
+        function mudar() {
+            document.body.style.color = "white"
+            document.body.style.backgroundColor = "blue";
+        }
+        function criar() {
+            var img = document.createElement("img")
+            img.setAttribute('id', 'foto')
+            img.setAttribute('src', 'noite.png')
+            var res = window.document.getElementById('resultado')
+            res.appendChild(img)
+
+        }
+    </script>
+</body>
+</html>

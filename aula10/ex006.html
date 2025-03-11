@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - Ex006</title>
+    <style>
+        div#area {
+            margin: auto;
+
+            height: 250px;
+            width: 250px;
+            line-height: 250px;
+
+            background-color: yellow;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Clique
+    </div>
+
+    <script>
+        var area = window.document.querySelector("div#area")
+
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar(){
+            area.innerHTML = "Clicou"
+            area.style.background = "red"
+        }
+
+        function entrar(){
+            area.innerHTML = "Entrou"
+            area.style.background = "blue"
+        }
+
+        function sair(){
+            area.innerHTML = "Saiu "
+            area.style.background = "orange"
+        } 
+
+    </script>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/Events -->
+</body>
+</html>

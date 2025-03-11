@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática de DOM</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo a usar DOM</h1>
+
+    <h2>Esse subtítulo ficará pequenininho</h2>
+    <p id="paragrafo1">Esse parágrafo ficará azul.</p>
+    <p name="paragrafo2">Esse parágrafo ficará gigante.</p>
+    <p class="paragrafo3">Esse parágrafo será repetido no final da página.</p>
+    <div id="div1">Essa div terá o fundo com a cor rosa.</div>
+    
+    <script>
+    //TAG:
+    var marca = window.document.getElementsByTagName("h2")[0]
+    marca.style.fontSize = "0.5rem"
+
+    //ID:
+    var id = window.document.getElementById("paragrafo1")
+    id.style.color = "blue"
+
+    //Nome:
+    var nome = window.document.getElementsByName("paragrafo2")[0]
+    nome.style.fontSize = "3rem"
+
+    //Classe:
+    var classe = window.document.getElementsByClassName("paragrafo3")[0]
+    window.document.write("<br><strong>Aqui está o parágrafo repetido: </strong>" + classe.innerText)
+
+    //Seletor
+    var seletor = window.document.querySelector("div#div1")
+    seletor.style.background = "pink"
+    </script>
+
+</body>
+</html>

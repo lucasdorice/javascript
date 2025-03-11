@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Ex010</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+
+    Velocidade do carro:
+    <input type="number" name="txtvel" id="txtvel"> 
+    Km/h
+
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <span id="resultado"></span>
+
+    <script>
+        function verificar() {
+            let txtvel = window.document.getElementById("txtvel")
+            let vel = Number(txtvel.value)
+
+            let res = window.document.getElementById("resultado")
+            res.innerHTML = `<p>A sua velocidade atual é <strong>${vel}Km/h</strong></p>`
+
+            if (vel > 60) {
+                res.innerHTML += `Você ultrapassou o limite de velocidade, logo será multado!`
+            } 
+
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+
+
+        }
+
+    </script>
+</body>
+</html>

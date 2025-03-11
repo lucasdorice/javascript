@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Em que país você mora?</h1>
+
+    Digite o país: <input type="text" name="pais" id="pais">
+    
+    <input type="button" value="Enviar" onclick="enviar()">
+
+    <span id="resultado"></span>
+
+    <script>
+        function enviar() {
+            let p = window.document.getElementById("pais")
+            let país = p.value
+            
+            let res = window.document.getElementById("resultado")
+
+            res.innerHTML = `<p>Você mora no país: <strong>${país}</strong></p>`
+
+            if (país == "Brasil" || país == "brasil" || país == "BRASIL" || país == "br" || país == "BR") {
+                res.innerHTML += `<p>Você mora no <strong>Brasil</strong>, então é <strong>brasileiro</strong>.</p>`
+            } else {
+                res.innerHTML += `<p>Você mora no(a) <strong>${país}</strong>, então é <strong>estrangeiro</strong>.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

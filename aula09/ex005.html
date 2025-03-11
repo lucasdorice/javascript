@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09 - Ex005</title>
+
+    <style>
+        body {
+            background-color: #191919;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 name="titulo">Iniciando os estudos com DOM</h1>
+
+    <p class="paragrafo1">Aqui vai o resultado: </p>
+
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+
+    <div id="divi">Clique em mim.</div>
+
+    <p id="paragrafo3">E aí, está gostando de JavaScript?</p>
+
+    <script>
+        //Marca:
+        var marca = window.document.getElementsByTagName("p")[1]
+        window.document.write("<br>- <strong>É isso que está dentro de um dos parágrafos:</strong> " + marca.innerHTML)
+        marca.style.color = "yellow"
+
+        //Id:
+        var idê = window.document.getElementById("divi")
+        idê.style.background = "orange"
+        idê.innerText = "Esse texto está mudado"
+
+        //Nome: 
+        var nome = window.document.getElementsByName("titulo")[0]
+        nome.style.fontSize = "40pt"
+        //window.document.getElementsByName("titulo")[0].style.color = "red"
+
+        //Classe:
+        var classe = window.document.getElementsByClassName("paragrafo1")[0]
+        classe.style.color = "blue"
+
+        //Seletor:
+        var seletor = window.document.querySelector("p#paragrafo3")
+        seletor.style.background = "red"
+
+
+        window.document.write("<br>- Olá, Mundo<br>")
+        window.document.write("- " + window.document.charset + "<br>")
+        window.document.write("- " + window.navigator.appName + "<br>")
+        window.document.write("- " + window.document.URL)
+    </script>
+</body>
+</html>

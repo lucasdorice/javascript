@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo a usar eventos DOM</title>
+
+    <style>
+        div.colorida {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            line-height: 250px;
+            margin-top: 5px;
+        }
+
+        div#caixa1 {
+            background-color: yellow;
+        }
+
+        div#caixa2 {
+            background-color: orange;
+        }
+
+        div#caixa3 {
+            background-color: green;
+        }   
+
+        div#caixa4 {
+            background-color: brown;
+        }
+
+        div#caixa5 {
+            background-color: red;
+        }
+
+        div#caixa6 {
+            background-color: darkred;
+        }
+
+        div#calculos {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando</h1>
+
+    <div id="caixa1" class="colorida" onmouseenter="entrar()" onmouseout="tirar()">Passe o mouse em cima</div>
+    <div id="caixa2" class="colorida" onmousemove="movimentar()">Movimente o mouse</div>
+    <div id="caixa3" class="colorida" onmousedown="clicaresegurar()" onmouseup="clicaresoltar()">Clique e segure</div>
+    <div id="caixa5" class="colorida" onclick="clicar()">Clique</div>
+
+    <div id="calculos">
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <span>=</span>
+    <span id="resultado"></span>
+    </div>
+
+    <script>
+        function entrar() {
+            let box1 = window.document.getElementById("caixa1")
+
+            box1.style.background = "red"
+        }
+
+        function movimentar() {
+            let box2 = window.document.getElementById("caixa2")
+            
+            box2.style.fontSize = "14pt"
+            box2.style.color = "white"
+            box2.style.borderColor = "red"
+            box2.innerText = "Movimentou"
+        }
+
+        function clicaresegurar() {
+            let box3 = window.document.getElementById("caixa3")
+
+            box3.style.color = "white"
+            box3.style.background = "darkgreen"
+        }
+
+        function clicaresoltar() {
+            let box3 = window.document.getElementById("caixa3")
+
+            box3.style.color = "black"
+            box3.style.background = "green"
+        }
+
+        function clicar() {
+            let box5 = window.document.getElementById("caixa5")
+
+            box5.style.background = "blue"
+            box5.style.borderColor = "darkblue"
+            box5.style.color = "white"
+            box5.innerText = "Clicou"
+        }
+
+        function tirar() {
+            let box1 = window.document.getElementById("caixa1")
+
+            box1.style.background = "yellow"
+        }
+
+        function somar() {
+            let tn1 = window.document.getElementById("txtn1")
+            let n1 = Number(tn1.value)
+
+            let tn2 = window.document.getElementById("txtn2")
+            let n2 = Number(tn2.value)
+
+            let soma = n1 + n2
+
+            let res = window.document.getElementById("resultado")
+
+            res.innerText = `${soma}`
+
+        }
+    </script>
+</body>
+</html>
