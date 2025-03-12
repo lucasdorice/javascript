@@ -11,7 +11,7 @@ function contar() {
     var res = window.document.getElementById("resultado")
 
     if (txtini.value.length == 0 || txtfim.value.length == 0) {
-        res.innerHTML = 'Impossível contar!'
+        window.alert(`Impossível contar!`)
     } else if (txtpasso.value.length == 0){
         window.alert('Passo inválido! Considerando PASSO 1')
         var passo = 1
