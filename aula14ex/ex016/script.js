@@ -9,20 +9,31 @@ function contar() {
     var passo = Number(txtpasso.value)
 
     var res = window.document.getElementById("resultado")
-    res.innerHTML = 'Contando:<br>'
 
     if (txtini.value.length == 0 || txtfim.value.length == 0) {
-        window.alert(`Preencha todas as informações para que o programa funcione corretamente!`)
+        res.innerHTML = 'Impossível contar!'
     } else if (txtpasso.value.length == 0){
         window.alert('Passo inválido! Considerando PASSO 1')
-    } else {
+        var passo = 1
+    } 
+    
+    if (ini <= fim) {
         while (ini <= fim){
             res.innerHTML += `&#x1F449 ${ini} `
             ini += passo
+            res.innerHTML = 'Contando:<br>'
+            res.innerHTML += `&#x1F449 &#x1F3C1`
         }
-    
-        res.innerHTML += `&#x1F449 &#x1F3C1`
+    } else if (ini >= fim) {
+        while (ini >= fim){
+            res.innerHTML += `&#x1F449 ${ini} `
+            ini -= passo
+            res.innerHTML = 'Contando:<br>'
+            res.innerHTML += `&#x1F449 &#x1F3C1`
+        }
     }
+
+
 }
 
 /*

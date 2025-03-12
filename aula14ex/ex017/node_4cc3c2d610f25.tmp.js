@@ -4,12 +4,13 @@ function gerarTabuada() {
 
     var res = window.document.getElementById("resultado")
 
-    res.innerHTML = ``
-
-    for (var c = 1; c <= 10; c++){
-        res.innerHTML += `${num} x ${c} = ${num * c}<br>`
-    }
     
 }
 
+var num = 8
+var c = c + 1
 
+while (num <= num * 10){
+    console.log(`${num} x ${c} = ${num}`)
+    num += num
+}
