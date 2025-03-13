@@ -31,8 +31,7 @@ function contar() {
     
                 res.innerHTML += `&#x1F449 &#x1F3C1`
             }
-        }
-        
+        }   
     } else if (ini <= fim) {
         while (ini <= fim){
             res.innerHTML += `&#x1F449 ${ini} `
