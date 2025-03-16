@@ -1,11 +1,9 @@
-function parimp(n){
-    if (n % 2 == 0) {
-        return 'par'
+function parImpar(n){
+    if (n % 2 == 0){
+        return `Par`
     } else {
-        return 'impar'
+        return `Ímpar`
     }
 }
 
-let res = parimp(11)
-
-console.log(res)
+console.log(parImpar(52))
