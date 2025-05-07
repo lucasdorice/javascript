@@ -1,15 +1,13 @@
 //somar todos os numeros de um array
 
-a = [1, 2, 3, 4, 5]
+valores = [1, 2, 3, 4, 5]
 
-soma = 0
+num = 5
 
-media = 0
-
-for(let c = 0;c < a.length;c++){
-    soma += a[c]
+if (valores.indexOf(num) == -1){
+    valores.push(num)
+    console.log(`valor add`)
+    console.log(valores)
+} else {
+    console.log(`valor ja inserido`)
 }
-
-media = soma / a.length
-
-console.log(media)
